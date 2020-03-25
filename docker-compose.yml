@@ -1,0 +1,9 @@
+version: "3"
+services:
+  ofetherconverter:
+    build: .
+    restart: always
+    ports:
+      - 8085:80
+    volumes:
+      - ./HRConvert2:/var/www/html
