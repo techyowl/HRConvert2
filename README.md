@@ -26,10 +26,10 @@ https://hub.docker.com/r/dwaaan/hrconvert2-docker
 
 1. git clone https://github.com/techyowl/Of-Ether-Converter
 2. Edit HRConvert2/config.php
-  2.1 Set Site Title & Site Logo Path at bottom.  
-  2.2 Update salts to be randomly set for your server each with high entropy.
-3. (optional)Edit docker-compose.yml changing only the port 8085 to be your desired exposed port for the converter.
-4. run `docker-compose up -d`
-5. open browser to your FQDN or Local IP with your desired port or :8085 and have fun using your instance of Of Ether Converter.
+3. Set Site Title & Site Logo Path at bottom.  
+4. Update salts to be randomly set for your server each with high entropy.
+5. (optional)Edit docker-compose.yml changing only the port 8085 to be your desired exposed port for the converter.
+6. run `docker-compose up -d`
+7. open browser to your FQDN or Local IP with your desired port or :8085 and have fun using your instance of Of Ether Converter.
 
 *[OFFICIAL WEBSITE (Try Of Ether Apps!)](https://www.ofether.com)*
