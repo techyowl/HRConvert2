@@ -37,10 +37,6 @@ else require_once (realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR.'sanitizeCore
 // else $IP = htmlentities(str_replace('..', '', str_replace(str_split('~#[](){};:$!#^&%@>*<"\''), '', $_SERVER['REMOTE_ADDR'])), ENT_QUOTES, 'UTF-8'); 
 // // / -----------------------------------------------------------------------------------
 
-// use php session to resolve safari detection issues
-session_start();
-$id = session_id();
-
 // / -----------------------------------------------------------------------------------
 // / The following code sets an echo variable that adjusts printed URL's to https when SSL is enabled.
 if (!empty($_SERVER['HTTPS']) && $_SERVER['SERVER_PORT'] == 443) $URLEcho = 's'; 
@@ -48,7 +44,12 @@ if (!empty($_SERVER['HTTPS']) && $_SERVER['SERVER_PORT'] == 443) $URLEcho = 's';
 
 // / -----------------------------------------------------------------------------------
 // / The following code sets or validates a Token so it can be used as a unique identifier for the session.
-if (!isset($Token1) or strlen($Token1) < 19) $Token1 =  $id; //hash('ripemd160', rand(0, 1000000000).rand(0, 1000000000)); 
+if (!isset($Token1) or strlen($Token1) < 19) {
+	// use php session to resolve safari detection issues
+	session_start();
+	$Token1 = session_id(); //hash('ripemd160', rand(0, 1000000000).rand(0, 1000000000)); 
+	session_write_close();
+}
 if (isset($Token2)) if ($Token2 !== hash('ripemd160', $Token1.$Salts1.$Salts2.$Salts3.$Salts4.$Salts5.$Salts6)) die('ERROR!!! HRConvert263, Authentication error!!!');
 if (!isset($Token2)) $Token2 = hash('ripemd160', $Token1.$Salts1.$Salts2.$Salts3.$Salts4.$Salts5.$Salts6); 
 // / -----------------------------------------------------------------------------------
