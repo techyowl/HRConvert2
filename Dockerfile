@@ -34,9 +34,9 @@ chmod -R 0755 /home/converter && \
 chown -R www-data /home/converter && \
 chgrp -R www-data /home/converter
 
-RUN chmod -R 0755 /var/www/html && \
-chown -R www-data /var/www/html && \
-chgrp -R www-data /var/www/html
+RUN chmod -R 0755 /var/www && \
+chown -R www-data /var/www && \
+chgrp -R www-data /var/www
 
 RUN wget https://raw.githubusercontent.com/zelon88/HRConvert2/master/rc.local -O /etc/rc.local && \
 chmod +x /etc/rc.local
