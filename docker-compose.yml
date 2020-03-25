@@ -6,4 +6,5 @@ services:
     ports:
       - 8085:80
     volumes:
-      - ./HRConvert2:/var/www/html
+      - ./HRConvert2/config.php:/var/www/html/config.php
+      - ./HRConvert2/Logs:/var/www/html/Logs
