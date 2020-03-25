@@ -2,7 +2,7 @@
 
 Docker deployment of a custom variant of HRConvert2 from https://github.com/zelon88/HRConvert2 - A self-hosted, drag-and-drop, & nosql file conversion server that supports 60+ file formats.
 
-![Of Ether Converter](https://github.com/techyowl/Of-Ether-Converter//blob/master/Screenshots/of-ether-converter-1.jpg)
+![Of Ether Converter](https://github.com/techyowl/Of-Ether-Converter/blob/master/HRConvert2/Screenshots/of-ether-converter-1.jpg)
 
 ## Docker Files based on the work on Docker Hub here
 https://hub.docker.com/r/dwaaan/hrconvert2-docker
@@ -32,4 +32,4 @@ https://hub.docker.com/r/dwaaan/hrconvert2-docker
 4. run `docker-compose up -d`
 5. open browser to your FQDN or Local IP with your desired port or :8085 and have fun using your instance of Of Ether Converter.
 
-*[OFFICIAL WEBSITE (Try Of Ether Converter!)](https://www.ofether.com)*
+*[OFFICIAL WEBSITE (Try Of Ether Apps!)](https://www.ofether.com)*
